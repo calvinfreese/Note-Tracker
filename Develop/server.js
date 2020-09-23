@@ -16,7 +16,7 @@ app.get("*", function(req, res){
 });
 
 app.get("/notes", function(req,res){
-    res.sendFile(path.join(publicFolder, "notes.html");
+    res.sendFile(path.join(publicFolder, "notes.html"));
 });
 
 
