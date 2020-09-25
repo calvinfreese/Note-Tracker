@@ -27,7 +27,7 @@ const saveNote = (note) => {
 // A function for deleting a note from the db
 const deleteNote = (id) => {
   return $.ajax({
-    url: "api/notes/" + id,
+    url: "/api/notes/" + id,
     method: "DELETE",
   });
 };
@@ -66,9 +66,10 @@ const handleNoteSave = function () {
 const handleNoteDelete = function (event) {
   // prevents the click listener for the list from being called when the button inside of it is clicked
   event.stopPropagation();
-
+  
   const note = $(this).parent(".list-group-item").data();
-
+  console.log('this is note ', note);
+  console.log('this is note id ', note.id);
   if (activeNote.id === note.id) {
     activeNote = {};
   }
