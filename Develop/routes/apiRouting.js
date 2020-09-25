@@ -50,6 +50,21 @@ module.exports = function(app){
     app.delete('/api/notes/:noteID', function(req, res){
         var selectedNote = req.params.noteID;
 
+        
+
+        fs.readFile('./db/db.json', function(err, data){
+            if (err) throw err;
+            let jsonArr = JSON.parse(data)
+            x = jsonArr.findIndex(obj => obj.id === selectedNote);
+            console.log(x);
+            jsonArr.splice(x, 1);
+
+            fs.writeFile('./db/db.json', JSON.stringify(jsonArr), function(err){
+                if (err) throw err;
+                console.log('deleted selected note from json array');
+            })
+        });
+    
         for (var i = 0; i < notes.length; i++) {
             if (selectedNote === notes[i].id) {
             notes.splice(i,1);
