@@ -51,5 +51,5 @@ Click [Here](https://calm-temple-85798.herokuapp.com/) to view the Heroku deploy
 This assignment was provided by Trilogy Education Services. Files `server.js`, `apiRouting.js`, and `htmlRouting.js` were created based on in class activities and lectures, [MDN](https://developer.mozilla.org/en-US/) Reference Documents for JavaScript syntax [JSHint](https://jshint.com/) for JavaScript validation, and various other online resources. 
 ## License
 
-[License](https://github.com/whackingMUFN/Homework/WeekFive/LICENSE.txt)
+[License](LICENSE.txt)
 MIT &copy; 2020 Calvin Freese
