@@ -11,8 +11,7 @@ app.use(express.json());
 app.use(express.static(__dirname + '/public'));
 
 
-// Add routing below
-
+// Add routing
 require('./routes/apiRouting')(app);
 require('./routes/htmlRouting')(app);
 
